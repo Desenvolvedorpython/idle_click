@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://c0hyjkab2x18t"]
+
+[ext_resource type="Script" uid="uid://bmy6ltqytg2y2" path="res://scripts/MENUS/menu_options.gd" id="1_v10g0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sxjn3"]
+font_size = 76
+
+[sub_resource type="LabelSettings" id="LabelSettings_v10g0"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_h1buv"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_8n6uj"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_4em5u"]
+font_size = 40
+
+[node name="MENU_OPTIONS" type="Node2D" unique_id=407746183]
+scale = Vector2(1, 1.02)
+script = ExtResource("1_v10g0")
+
+[node name="ui" type="Control" parent="." unique_id=1058845102]
+layout_mode = 3
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="ui" unique_id=1745306629]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 720.0
+offset_bottom = 1260.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.25490198, 1, 1)
+
+[node name="Label" type="Label" parent="ui" unique_id=1302235626]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 69.0
+offset_right = 666.0
+offset_bottom = 282.0
+text = "CONFIGURACOES
+"
+label_settings = SubResource("LabelSettings_sxjn3")
+horizontal_alignment = 1
+
+[node name="sensibilidade" type="Label" parent="ui" unique_id=1168606175]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 280.0
+offset_right = 151.0
+offset_bottom = 346.0
+text = "sensibilidade"
+label_settings = SubResource("LabelSettings_v10g0")
+
+[node name="HSlider" type="HSlider" parent="ui/sensibilidade" unique_id=1304033034]
+layout_mode = 0
+offset_left = 318.0
+offset_top = -10.0
+offset_right = 648.0
+offset_bottom = 70.0
+value = 50.0
+
+[node name="som" type="Label" parent="ui" unique_id=1314533481]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 390.0
+offset_right = 195.0
+offset_bottom = 450.0
+text = "SOM"
+label_settings = SubResource("LabelSettings_h1buv")
+
+[node name="CheckBox" type="CheckBox" parent="ui/som" unique_id=959058711]
+layout_mode = 0
+offset_left = 240.0
+offset_right = 629.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 31
+text = "ATIVAR/DESATIVAR SOM"
+icon_alignment = 1
+
+[node name="OPCAO3" type="Label" parent="ui" unique_id=1661129130]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 505.0
+offset_right = 181.0
+offset_bottom = 560.0
+text = "OPCAO3"
+label_settings = SubResource("LabelSettings_8n6uj")
+
+[node name="Button" type="Button" parent="ui/OPCAO3" unique_id=462402696]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 1.0
+offset_right = 671.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 40
+text = "IR"
+
+[node name="OPCAO4" type="Label" parent="ui" unique_id=877760287]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 610.0
+offset_right = 175.0
+offset_bottom = 665.0
+text = "OPCAO4"
+label_settings = SubResource("LabelSettings_4em5u")
+
+[node name="Button" type="Button" parent="ui/OPCAO4" unique_id=1961444200]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 1.0
+offset_right = 671.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 40
+text = "IR"
+
+[node name="SAIR" type="Button" parent="ui" unique_id=354092031]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 50
+text = "X"
+
+[connection signal="value_changed" from="ui/sensibilidade/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="ui/SAIR" to="." method="_on_sair_pressed"]

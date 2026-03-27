@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b5mqbm88pbjk1"]
+
+[node name="barra_de_carregamento" type="Control" unique_id=1360334600]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=231498348]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -390.0
+offset_right = 360.0
+offset_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.18431373, 0.23921569, 1, 1)
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=372832462]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 750.0
+offset_right = 660.0
+offset_bottom = 930.0

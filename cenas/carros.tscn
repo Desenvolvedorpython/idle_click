@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cwyn6xcyd7j1h"]
+
+[ext_resource type="PackedScene" uid="uid://4sce2kdx78qr" path="res://assets/CARR/Models/GLB format/ambulance.glb" id="1_cc5d5"]
+[ext_resource type="PackedScene" uid="uid://brrtijthuc2vj" path="res://assets/CARR/Models/GLB format/delivery-flat.glb" id="2_pxsbw"]
+[ext_resource type="PackedScene" uid="uid://c1423285p300t" path="res://assets/CARR/Models/GLB format/delivery.glb" id="3_s6fhs"]
+[ext_resource type="PackedScene" uid="uid://smcd3bmxld22" path="res://assets/CARR/Models/GLB format/firetruck.glb" id="4_kkxbi"]
+[ext_resource type="PackedScene" uid="uid://obiyrfarrxo8" path="res://assets/CARR/Models/GLB format/garbage-truck.glb" id="5_a7qyf"]
+[ext_resource type="PackedScene" uid="uid://dxii010db7dcg" path="res://assets/CARR/Models/GLB format/hatchback-sports.glb" id="6_fnj2t"]
+[ext_resource type="PackedScene" uid="uid://b1vtryy8gh4l2" path="res://assets/CARR/Models/GLB format/kart-oobi.glb" id="7_tk7h6"]
+[ext_resource type="PackedScene" uid="uid://6ww8ecopje0o" path="res://assets/CARR/Models/GLB format/kart-oodi.glb" id="8_hm1y0"]
+[ext_resource type="PackedScene" uid="uid://dlmxgcljsx8" path="res://assets/CARR/Models/GLB format/police.glb" id="9_35crm"]
+[ext_resource type="PackedScene" uid="uid://bbgt5lorpjhya" path="res://assets/CARR/Models/GLB format/sedan-sports.glb" id="10_bobfm"]
+[ext_resource type="PackedScene" uid="uid://bvm12b2lhvalx" path="res://assets/CARR/Models/GLB format/sedan.glb" id="11_lu8g5"]
+[ext_resource type="PackedScene" uid="uid://cd5nmhum4170o" path="res://assets/CARR/Models/GLB format/taxi.glb" id="13_xqy8m"]
+[ext_resource type="PackedScene" uid="uid://bpp60pt5j5mx7" path="res://assets/CARR/Models/GLB format/tractor-shovel.glb" id="14_68pda"]
+[ext_resource type="PackedScene" uid="uid://cun31ofn3ycst" path="res://assets/CARR/Models/GLB format/van.glb" id="15_xq5fp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e0wbc"]
+albedo_color = Color(0, 0.54004896, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_evltv"]
+material = SubResource("StandardMaterial3D_e0wbc")
+
+[node name="carros" type="Node3D" unique_id=1777004558]
+
+[node name="chao temporario" type="MeshInstance3D" parent="." unique_id=1195579180]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
+mesh = SubResource("PlaneMesh_evltv")
+
+[node name="ambulance" parent="." unique_id=871379769 instance=ExtResource("1_cc5d5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.764627, 9.536743e-07, -26.104845)
+
+[node name="delivery-flat" parent="." unique_id=865713580 instance=ExtResource("2_pxsbw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.188576, 0, -26.026127)
+
+[node name="delivery" parent="." unique_id=385348080 instance=ExtResource("3_s6fhs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.501623, 0, -25.8912)
+
+[node name="firetruck" parent="." unique_id=1316875454 instance=ExtResource("4_kkxbi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.691993, 0, -25.98717)
+
+[node name="garbage-truck" parent="." unique_id=505315475 instance=ExtResource("5_a7qyf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.01906, 0, -26.120102)
+
+[node name="hatchback-sports" parent="." unique_id=2004046320 instance=ExtResource("6_fnj2t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.325579, 0, -25.783033)
+
+[node name="kart-oobi2" parent="." unique_id=609314974 instance=ExtResource("7_tk7h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.026953, 0, 2.9231834)
+
+[node name="kart-oodi2" parent="." unique_id=2076516868 instance=ExtResource("8_hm1y0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.35639, 0, 2.9510193)
+
+[node name="police" parent="." unique_id=679079181 instance=ExtResource("9_35crm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.07731, 0, -25.933893)
+
+[node name="sedan-sports" parent="." unique_id=2079004170 instance=ExtResource("10_bobfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4188576, 0, -25.557932)
+
+[node name="sedan" parent="." unique_id=121222124 instance=ExtResource("11_lu8g5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8487341, 0, -25.669647)
+
+[node name="taxi" parent="." unique_id=1395579558 instance=ExtResource("13_xqy8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47009373, -2.3841858e-07, -25.44092)
+
+[node name="tractor-shovel" parent="." unique_id=919324114 instance=ExtResource("14_68pda")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8865888, 0, -25.291239)
+
+[node name="van" parent="." unique_id=1822418053 instance=ExtResource("15_xq5fp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6010447, -2.3841858e-07, -25.362194)
