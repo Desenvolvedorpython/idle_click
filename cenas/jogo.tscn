@@ -15,6 +15,9 @@
 [ext_resource type="AudioStream" uid="uid://msskgg2w2xii" path="res://audios/efeitos_sonoros/_MConverter.eu_coins.mp3" id="13_c8qsu"]
 [ext_resource type="PackedScene" uid="uid://dy0qk723df86l" path="res://city/estradas/Models/GLB format/encontro3pistas.glb" id="14_c8qsu"]
 [ext_resource type="PackedScene" uid="uid://camni4hxppn78" path="res://city/estradas/Models/GLB format/pista4lado.glb" id="15_lcfgm"]
+[ext_resource type="PackedScene" uid="uid://jtodc06di2s2" path="res://city/ASSETS/Models/GLB format/building-type-e.glb" id="16_mikth"]
+[ext_resource type="PackedScene" uid="uid://dxii010db7dcg" path="res://assets/CARR/Models/GLB format/hatchback-sports.glb" id="17_8bbpn"]
+[ext_resource type="PackedScene" uid="uid://dowa2mx7gvb6" path="res://personagens/figurantes/Models/GLB format/character-male-d.glb" id="18_5n1n7"]
 
 [sub_resource type="Curve3D" id="Curve3D_105i5"]
 
@@ -114,8 +117,9 @@ shape = SubResource("ConcavePolygonShape3D_1frua")
 transform = Transform3D(0.769, 0, 0, 0, 0.70199996, 0, 0, 0, 0.68, 0.038, 0.001, 0.08)
 mesh = SubResource("PlaneMesh_c8qsu")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="chao" unique_id=395464574]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.034756757, 0)
+[node name="agua" type="MeshInstance3D" parent="chao" unique_id=395464574]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -0.034756757, 0)
+visible = false
 mesh = SubResource("PlaneMesh_mikth")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2007580091]
@@ -408,6 +412,15 @@ transform = Transform3D(-3.4094883e-06, 0, 4, 0, 4, 0, -78, 0, -1.7484555e-07, -
 transform = Transform3D(-3.0507308e-06, 0, 4, 0, 4, 0, -69.79258, 0, -1.7484555e-07, -11.42, 0, -19.644077)
 
 [node name="casas" type="Node" parent="." unique_id=429077474]
+
+[node name="casa1" parent="casas" unique_id=1756138565 instance=ExtResource("16_mikth")]
+transform = Transform3D(0.44699198, 0, -4.9799795, 0, 5, 0, 4.9799795, 0, 0.44699198, -16.199469, 5.9604645e-08, 29.478943)
+
+[node name="hatchback-sports" parent="casas/casa1" unique_id=2004046320 instance=ExtResource("17_8bbpn")]
+transform = Transform3D(0.011899336, 0, 0.14952728, 0, 0.14999998, 0, -0.14952728, 0, 0.011899336, -0.5656047, 0.03999999, -0.8897455)
+
+[node name="character-male-d2" parent="." unique_id=114770752 instance=ExtResource("18_5n1n7")]
+transform = Transform3D(-0.008778861, 0, -0.99996144, 0, 1, 0, 0.99996144, 0, -0.008778861, -11.691728, 0.24377722, 29.15194)
 
 [connection signal="pressed" from="hud2d/UI/voltar_home" to="." method="_on_voltar_home_pressed"]
 [connection signal="pressed" from="hud2d/UI/CONFIGS" to="." method="_on_voltar_home_pressed"]
