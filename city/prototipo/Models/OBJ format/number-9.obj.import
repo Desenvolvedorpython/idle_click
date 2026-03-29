@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhw37ym2gl53w"
+path="res://.godot/imported/number-9.obj-33f32b5df66ea3034a8a34b5aea8a939.mesh"
+
+[deps]
+
+files=["res://.godot/imported/number-9.obj-33f32b5df66ea3034a8a34b5aea8a939.mesh"]
+
+source_file="res://city/prototipo/Models/OBJ format/number-9.obj"
+dest_files=["res://.godot/imported/number-9.obj-33f32b5df66ea3034a8a34b5aea8a939.mesh", "res://.godot/imported/number-9.obj-33f32b5df66ea3034a8a34b5aea8a939.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

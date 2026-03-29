@@ -19,6 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://jtodc06di2s2" path="res://city/ASSETS/Models/GLB format/building-type-e.glb" id="16_mikth"]
 [ext_resource type="PackedScene" uid="uid://dxii010db7dcg" path="res://assets/CARR/Models/GLB format/hatchback-sports.glb" id="17_8bbpn"]
 [ext_resource type="PackedScene" uid="uid://dowa2mx7gvb6" path="res://personagens/figurantes/Models/GLB format/character-male-d.glb" id="18_5n1n7"]
+[ext_resource type="PackedScene" uid="uid://cx7ahj3bkwn8y" path="res://city/industria/Models/GLB format/building-l.glb" id="20_5b70y"]
+[ext_resource type="PackedScene" uid="uid://doytfroqojyva" path="res://city/industria/Models/GLB format/galpao1.glb" id="21_jjf05"]
+[ext_resource type="PackedScene" uid="uid://c7mvoy762neph" path="res://city/prototipo/Models/GLB format/paredeReta.glb" id="22_s4vdq"]
+[ext_resource type="PackedScene" uid="uid://6osv1hxaejr7" path="res://city/prototipo/Models/GLB format/door-garage.glb" id="23_a6k30"]
 
 [sub_resource type="Curve3D" id="Curve3D_105i5"]
 
@@ -609,14 +613,64 @@ transform = Transform3D(50.199993, 0, -0.0021641413, 0, 4, 0, 0.027159974, 0, 3.
 
 [node name="casas" type="Node" parent="." unique_id=429077474]
 
+[node name="hatchback-sports" parent="casas" unique_id=2004046320 instance=ExtResource("17_8bbpn")]
+transform = Transform3D(-0.7499999, 0, -6.556707e-08, 0, 0.7499998, 0, 6.556707e-08, 0, -0.7499999, -20.527464, 0.2, 69.50163)
+
+[node name="character-male-d2" parent="casas" unique_id=114770752 instance=ExtResource("18_5n1n7")]
+transform = Transform3D(-4.371138e-08, 0, 0.9999998, 0, 0.9999998, 0, -0.9999998, 0, -4.371138e-08, -20.534569, 0.24377719, 66.59548)
+
 [node name="casa1" parent="casas" unique_id=1756138565 instance=ExtResource("16_mikth")]
-transform = Transform3D(0.108550355, 0, 4.998821, 0, 4.9999995, 0, -4.998821, 0, 0.108550355, -16.018389, 5.9604645e-08, 66.77086)
+transform = Transform3D(-2.185569e-07, 0, 4.999999, 0, 4.9999995, 0, -4.999999, 0, -2.185569e-07, -22.704098, 5.9604645e-08, 92.86311)
 
-[node name="hatchback-sports" parent="casas/casa1" unique_id=2004046320 instance=ExtResource("17_8bbpn")]
-transform = Transform3D(0.011899336, 0, 0.14952728, 0, 0.14999998, 0, -0.14952728, 0, 0.011899336, -0.5656047, 0.03999999, -0.8897455)
+[node name="casa2" parent="casas" unique_id=1397718625 instance=ExtResource("16_mikth")]
+transform = Transform3D(-2.185569e-07, 0, 4.999999, 0, 4.9999995, 0, -4.999999, 0, -2.185569e-07, -22.704098, 5.9604645e-08, 84.65692)
 
-[node name="character-male-d2" parent="casas/casa1" unique_id=114770752 instance=ExtResource("18_5n1n7")]
-transform = Transform3D(0.19903454, 0, -0.019627733, 0, 0.19999999, 0, 0.019627733, 0, 0.19903454, 0.015458107, 0.04875543, -0.903785)
+[node name="casa3" parent="casas" unique_id=190462661 instance=ExtResource("16_mikth")]
+transform = Transform3D(-2.185569e-07, 0, 4.999999, 0, 4.9999995, 0, -4.999999, 0, -2.185569e-07, -22.704098, 5.9604645e-08, 73.13967)
+
+[node name="casa4" parent="casas" unique_id=694745926 instance=ExtResource("16_mikth")]
+transform = Transform3D(-2.185569e-07, 0, 4.999999, 0, 4.9999995, 0, -4.999999, 0, -2.185569e-07, -22.704098, 5.9604645e-08, 63.521942)
+
+[node name="casa5" parent="casas" unique_id=743985208 instance=ExtResource("16_mikth")]
+transform = Transform3D(-2.185569e-07, 0, 4.999999, 0, 4.9999995, 0, -4.999999, 0, -2.185569e-07, -22.704098, 5.9604645e-08, 54.84223)
+
+[node name="casa6" parent="casas" unique_id=797073730 instance=ExtResource("16_mikth")]
+transform = Transform3D(-2.185569e-07, 0, 4.999999, 0, 4.9999995, 0, -4.999999, 0, -2.185569e-07, -22.704098, 5.9604645e-08, 46.478146)
+
+[node name="casa7" parent="casas" unique_id=1358145947 instance=ExtResource("16_mikth")]
+transform = Transform3D(-2.185569e-07, 0, 4.999999, 0, 4.9999995, 0, -4.999999, 0, -2.185569e-07, -22.704098, 5.9604645e-08, 38.659454)
+
+[node name="casa8" parent="casas" unique_id=1376977169 instance=ExtResource("16_mikth")]
+transform = Transform3D(-2.185569e-07, 0, 4.999999, 0, 4.9999995, 0, -4.999999, 0, -2.185569e-07, -22.704098, 5.9604645e-08, 31.30486)
+
+[node name="industrias" type="Node" parent="." unique_id=397098969]
+
+[node name="textil" parent="industrias" unique_id=1628585149 instance=ExtResource("20_5b70y")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 20.83479, 0.23244882, -46.386013)
+
+[node name="galpao1" parent="industrias/textil" unique_id=1231888896 instance=ExtResource("21_jjf05")]
+transform = Transform3D(0.6666667, 0, 0, 0, 0.6666667, 0, 0, 0, 0.6666667, 1.1686647, -9.934108e-09, -0.28826475)
+
+[node name="wall-low2" parent="industrias/textil" unique_id=797610783 instance=ExtResource("22_s4vdq")]
+transform = Transform3D(0.22615027, 0, 0, 0, 0.7954058, 0, 0, 0, 2.4638877, -1.54, 0, 0.143)
+
+[node name="wall-low3" parent="industrias/textil" unique_id=449813053 instance=ExtResource("22_s4vdq")]
+transform = Transform3D(0.22615027, 0, 0, 0, 0.7954058, 0, 0, 0, 2.3328006, 1.3144512, -9.934108e-09, 0.07816219)
+
+[node name="wall-low4" parent="industrias/textil" unique_id=1513626832 instance=ExtResource("22_s4vdq")]
+transform = Transform3D(-9.885343e-09, 0, 1.1409891, 0, 0.79540586, 0, -0.22615032, 0, -4.9874203e-08, 0.7674408, -9.934108e-09, -1.1001816)
+
+[node name="wall-low7" parent="industrias/textil" unique_id=2106906990 instance=ExtResource("22_s4vdq")]
+transform = Transform3D(-9.885343e-09, 0, 0.44830513, 0, 0.25190985, 0, -0.22615032, 0, -1.959604e-08, -0.023, 0.271, -1.1)
+
+[node name="wall-low6" parent="industrias/textil" unique_id=71799531 instance=ExtResource("22_s4vdq")]
+transform = Transform3D(-9.885344e-09, 0, 1.3244928, 0, 0.79540586, 0, -0.22615032, 0, -5.7895416e-08, -0.8982878, -9.934108e-09, -1.1001816)
+
+[node name="wall-low5" parent="industrias/textil" unique_id=1554395745 instance=ExtResource("22_s4vdq")]
+transform = Transform3D(-0.010080269, 0, 2.9006743, 0, 0.79540586, 0, -0.22519402, 0, -0.12984169, -0.11400032, -9.934108e-09, 1.2939997)
+
+[node name="door-garage2" parent="industrias/textil" unique_id=1046224204 instance=ExtResource("23_a6k30")]
+transform = Transform3D(5.296616e-05, -0.5446341, 4.0376804e-09, -1.26372e-09, -7.2380395e-09, -0.30549127, -0.030347085, -0.0009505749, 1.2728382e-08, 0.2001133, 0.12927875, -1.0997372)
 
 [connection signal="pressed" from="hud2d/UI/voltar_home" to="." method="_on_voltar_home_pressed"]
 [connection signal="pressed" from="hud2d/UI/CONFIGS" to="." method="_on_voltar_home_pressed"]
