@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d3v5v62d32g1s" path="res://texturas/botoes/tap/file_000000002a8071f5aa415d8f7749e504-removebg-preview.png" id="2_32vai"]
 [ext_resource type="Script" uid="uid://c5p7xq7efvsru" path="res://scripts/genericos/label_3d.gd" id="2_105i5"]
 [ext_resource type="Texture2D" uid="uid://ca3mxai35a5gj" path="res://texturas/botoes/ui/Screenshot_20260310-162711_Chrome.jpg" id="3_srya6"]
+[ext_resource type="Texture2D" uid="uid://byd7vlklf7v3v" path="res://texturas/chaos/barro.jpg" id="4_p58hu"]
 [ext_resource type="Script" uid="uid://vemo3ds3xivd" path="res://scripts/genericos/scriptglobal.gd" id="5_dmxwg"]
 [ext_resource type="Texture2D" uid="uid://divf77cvk5cjm" path="res://texturas/botoes/ui/Screenshot_20260310-154514_Chrome.jpg" id="5_dtkcs"]
 [ext_resource type="Script" uid="uid://dfcvi1l2dj17d" path="res://scripts/cameras/camera_3d.gd" id="5_s5cfb"]
@@ -30,10 +31,19 @@ albedo_texture = ExtResource("1_k46e6")
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8tqj5"]
-albedo_color = Color(0.29492432, 0.29492432, 0.29492432, 1)
+albedo_color = Color(0.29543713, 0.33003333, 0.29543713, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_c8qsu"]
 material = SubResource("StandardMaterial3D_8tqj5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5b70y"]
+albedo_texture = ExtResource("4_p58hu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5n1n7"]
+albedo_color = Color(0.1428257, 0.11207495, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_p58hu"]
+material = SubResource("StandardMaterial3D_5n1n7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lcfgm"]
 albedo_color = Color(0, 0.25766784, 1, 1)
@@ -113,9 +123,18 @@ mesh = SubResource("PlaneMesh_xg0i4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="chao/StaticBody3D" unique_id=780955911]
 shape = SubResource("ConcavePolygonShape3D_1frua")
 
-[node name="calcado" type="MeshInstance3D" parent="chao" unique_id=1606143831]
-transform = Transform3D(0.769, 0, 0, 0, 0.70199996, 0, 0, 0, 0.68, 0.038, 0.001, 0.08)
+[node name="terreno1" type="MeshInstance3D" parent="chao" unique_id=1606143831]
+transform = Transform3D(0.38224822, 0, 0, 0, 0.70199996, 0, 0, 0, 0.68, -0.34705576, 0.001, 0.08000001)
 mesh = SubResource("PlaneMesh_c8qsu")
+
+[node name="terreno2" type="MeshInstance3D" parent="chao" unique_id=1944166985]
+transform = Transform3D(0.38224822, 0, 0, 0, 0.70199996, 0, 0, 0, 0.35311803, 0.42050245, 0.001, -0.25772268)
+mesh = SubResource("PlaneMesh_c8qsu")
+
+[node name="terrenofazenda1" type="MeshInstance3D" parent="chao" unique_id=720514090]
+transform = Transform3D(0.38224822, 0, 0, 0, 0.70199996, 0, 0, 0, 0.32946905, 0.42050245, 0.001, 0.42452103)
+material_override = SubResource("StandardMaterial3D_5b70y")
+mesh = SubResource("PlaneMesh_p58hu")
 
 [node name="agua" type="MeshInstance3D" parent="chao" unique_id=395464574]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -0.034756757, 0)
@@ -123,7 +142,7 @@ visible = false
 mesh = SubResource("PlaneMesh_mikth")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2007580091]
-transform = Transform3D(-0.1386599, 0.77137005, -0.62109715, 0.03046074, 0.6301805, 0.7758509, 0.9898715, 0.08866031, -0.11087725, -16.808302, 26.198677, -21.748642)
+transform = Transform3D(0.055726588, -0.7760744, 0.62817436, 0.030460743, 0.6301807, 0.77585083, -0.9979813, -0.0241009, 0.058757573, -16.808302, 26.198677, -21.748642)
 script = ExtResource("5_s5cfb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=155298171]
@@ -405,22 +424,199 @@ transform = Transform3D(-0.012042512, 0, -0.9999274, 0, 1, 0, 0.9999274, 0, -0.0
 [node name="4ladoprincipal" parent="pistas" unique_id=1037869494 instance=ExtResource("15_lcfgm")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -11.42, 0, 20.651)
 
+[node name="4ladoprincipal2" parent="pistas" unique_id=1739810450 instance=ExtResource("15_lcfgm")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -27.55247, 0, 20.651)
+
 [node name="pistacentrall1" parent="pistas" unique_id=946720420 instance=ExtResource("12_c8qsu")]
 transform = Transform3D(-3.4094883e-06, 0, 4, 0, 4, 0, -78, 0, -1.7484555e-07, -11.42, 0, 65.609)
 
 [node name="pistacentrall2" parent="pistas" unique_id=215325672 instance=ExtResource("12_c8qsu")]
 transform = Transform3D(-3.0507308e-06, 0, 4, 0, 4, 0, -69.79258, 0, -1.7484555e-07, -11.42, 0, -19.644077)
 
+[node name="pistacity1" parent="pistas" unique_id=2027240720 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(4.303614, 0, 0, 0, 4, 0, 0, 0, 4, -19.55, 0, 20.65)
+
+[node name="pistacity5" parent="pistas" unique_id=200274121 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.436119e-07, 0, 4.0264726, 0, 4, 0, -7.860924, 0, -1.760027e-07, -27.54, 0, 30.5)
+
+[node name="encontro35" parent="pistas/pistacity5" unique_id=463528555 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-0.508846, 0, 4.4891408e-08, 0, 1, 0, -8.684799e-08, 0, -1.0025071, -0.7537286, 0, 0)
+
+[node name="pistacity14" parent="pistas" unique_id=21649558 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-5.356397e-07, 0, -4.0264726, 0, 4, 0, 12.254007, 0, -1.760027e-07, -81.69, 0, 28.338518)
+
+[node name="pistacity26" parent="pistas" unique_id=123291091 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-8.056835e-07, 0, -4.0264726, 0, 4, 0, 18.431889, 0, -1.760027e-07, -81.69, 0, 9.538296)
+
+[node name="encontro36" parent="pistas" unique_id=493608408 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(5.245365e-07, 0, 4.0365663, 0, 4, 0, -3.9999995, 0, 5.293318e-07, -81.69, 0, 36.39263)
+
+[node name="pistacity15" parent="pistas" unique_id=815521132 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.436119e-07, 0, -4.0264726, 0, 4, 0, 7.860924, 0, -1.760027e-07, -81.69, 0, 42.323)
+
+[node name="encontro35" parent="pistas/pistacity15" unique_id=1094139952 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-0.508846, 0, 4.4891408e-08, 0, 1, 0, -8.6847976e-08, 0, -1.0025069, 0.754, 0, 0)
+
+[node name="pistacity16" parent="pistas" unique_id=309845709 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.436119e-07, 0, -4.0264726, 0, 4, 0, 7.860924, 0, -1.760027e-07, -81.69, 0, 54.077137)
+
+[node name="encontro35" parent="pistas/pistacity16" unique_id=2044807381 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-0.508846, 0, 4.4891408e-08, 0, 1, 0, -8.684796e-08, 0, -1.0025067, 0.74099874, 0, 0)
+
+[node name="pistacity17" parent="pistas" unique_id=918753956 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.496911e-07, 0, -4.026, 0, 4, 0, 8, 0, -1.7598205e-07, -81.69, 0, 65.77629)
+
+[node name="encontro35" parent="pistas/pistacity17" unique_id=2124151436 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-0.5, 0, 1.5144879e-07, 0, 1, 0, -7.54979e-08, 0, -1.003, 0.744, 0, 0)
+
+[node name="pistacity18" parent="pistas" unique_id=1204557344 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.436119e-07, 0, -4.0264726, 0, 4, 0, 7.860924, 0, -1.760027e-07, -81.69, 0, 77.6)
+
+[node name="encontro35" parent="pistas/pistacity18" unique_id=1063488572 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-0.508846, 0, 4.489141e-08, 0, 1, 0, -8.684795e-08, 0, -1.0025066, 0.7517643, 0, 0)
+
+[node name="pistacity20" parent="pistas" unique_id=46566424 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.436119e-07, 0, -4.0264726, 0, 4, 0, 7.860924, 0, -1.760027e-07, -81.69, 0, 89.44)
+
+[node name="pistacity7" parent="pistas" unique_id=1806148173 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.436119e-07, 0, 4.0264726, 0, 4, 0, -7.860924, 0, -1.760027e-07, -27.54, 0, 42.35)
+
+[node name="encontro35" parent="pistas/pistacity7" unique_id=442427482 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-0.508846, 0, 4.4891408e-08, 0, 1, 0, -8.684799e-08, 0, -1.0025071, -0.7537286, 0, 0)
+
+[node name="pistacity10" parent="pistas" unique_id=1582353626 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.436119e-07, 0, 4.0264726, 0, 4, 0, -7.860924, 0, -1.760027e-07, -27.54, 0, 54.007454)
+
+[node name="encontro35" parent="pistas/pistacity10" unique_id=1867740056 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-0.508846, 0, 4.4891408e-08, 0, 1, 0, -8.684799e-08, 0, -1.0025071, -0.7537286, 0, 0)
+
+[node name="pistacity11" parent="pistas" unique_id=777492125 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.436119e-07, 0, 4.0264726, 0, 4, 0, -7.860924, 0, -1.760027e-07, -27.54, 0, 65.832504)
+
+[node name="encontro35" parent="pistas/pistacity11" unique_id=2074185202 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-0.508846, 0, 4.4891408e-08, 0, 1, 0, -8.684799e-08, 0, -1.0025071, -0.7537286, 0, 0)
+
+[node name="pistacity12" parent="pistas" unique_id=2066810269 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.436119e-07, 0, 4.0264726, 0, 4, 0, -7.860924, 0, -1.760027e-07, -27.54, 0, 77.61343)
+
+[node name="encontro35" parent="pistas/pistacity12" unique_id=1538728520 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-0.508846, 0, 4.4891408e-08, 0, 1, 0, -8.684799e-08, 0, -1.0025071, -0.7537286, 0, 0)
+
+[node name="pistacity13" parent="pistas" unique_id=1451780412 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-3.436119e-07, 0, 4.0264726, 0, 4, 0, -7.860924, 0, -1.760027e-07, -27.54, 0, 89.32817)
+
+[node name="road-curve5" parent="pistas" unique_id=1453935094 instance=ExtResource("13_8tqj5")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -29.548, 0, -46.095)
+
+[node name="pistacity3" parent="pistas" unique_id=531467929 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-7.772591, 0, -3.4969102e-07, 0, 4, 0, 6.7950157e-07, 0, -3.9999993, -37.305115, 0, -48.09329)
+
+[node name="pistacity22" parent="pistas" unique_id=1520870230 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-10.339275, 0, -3.4969102e-07, 0, 4, 0, 9.0388824e-07, 0, -3.9999995, -49.726833, 0, -48.09329)
+
+[node name="pistacity24" parent="pistas" unique_id=951166185 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-9.195343, 0, -3.4969102e-07, 0, 4, 0, 8.0388253e-07, 0, -3.9999995, -63.11269, 0, -48.09329)
+
+[node name="pistacity25" parent="pistas" unique_id=956102527 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-4.7741084, 0, -3.4969102e-07, 0, 4, 0, 4.1736587e-07, 0, -3.9999995, -73.67507, 0, -48.09329)
+
+[node name="road-curve3" parent="pistas" unique_id=2097697779 instance=ExtResource("13_8tqj5")]
+transform = Transform3D(-1.7484554e-07, 0, 4, 0, 4, 0, -4, 0, -1.748456e-07, -79.67, 0, -46.091)
+
+[node name="pistaindustrial5" parent="pistas" unique_id=1957497695 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-1.6960018e-06, 0, -4, 0, 4, 0, 38.8, 0, -1.7484555e-07, -27.547, 0, -22.745)
+
+[node name="pistaindustrial6" parent="pistas" unique_id=1860178135 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-6.141058e-07, 0, -4, 0, 4, 0, 14.049104, 0, -1.7484555e-07, -27.55, 0, 7.633)
+
+[node name="pistaindustrial7" parent="pistas" unique_id=1899407413 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-8.442317, 0, -3.5094436e-07, 0, 4, 0, 7.380508e-07, 0, -4.0143356, -75.511, 0, -1.375)
+
+[node name="pistaindustrial8" parent="pistas" unique_id=2123220208 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-9.274876, 0, -3.5094436e-07, 0, 4, 0, 8.108354e-07, 0, -4.0143356, -62.989273, 0, -1.375)
+
+[node name="pistaindustrial10" parent="pistas" unique_id=469399882 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-10.509913, 0, -3.5094436e-07, 0, 4, 0, 9.188058e-07, 0, -4.0143356, -49.534687, 0, -1.375)
+
+[node name="pistaindustrial11" parent="pistas" unique_id=961658148 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-11.33499, 0, -3.5094436e-07, 0, 4, 0, 9.909362e-07, 0, -4.0143356, -35.12214, 4.7683716e-07, -1.3718772)
+
+[node name="pistaindustrial2" parent="pistas" unique_id=753387929 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-1.8664763e-06, 0, -4, 0, 4, 0, 42.7, 0, -1.7484555e-07, -69.35, 0, -24.73)
+
+[node name="road-intersection-line2" parent="pistas/pistaindustrial2" unique_id=1483721537 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(5.0203155e-08, 0, 0.09411768, 0, 1, 0, -1, 0, 5.3340835e-07, -0.547, 0, 0)
+
+[node name="pistaindustrial4" parent="pistas" unique_id=2067196650 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-1.8664763e-06, 0, -4, 0, 4, 0, 42.7, 0, -1.7484555e-07, -56.52, 0, -24.73)
+
+[node name="road-intersection-line2" parent="pistas/pistaindustrial4" unique_id=1191669630 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(5.0203155e-08, 0, 0.09411768, 0, 1, 0, -1, 0, 5.3340835e-07, -0.547, 0, 0)
+
+[node name="pistaindustrial9" parent="pistas" unique_id=500979133 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-1.8664763e-06, 0, -4, 0, 4, 0, 42.7, 0, -1.7484555e-07, -42.632988, 0, -24.73)
+
+[node name="road-intersection-line2" parent="pistas/pistaindustrial9" unique_id=1160856137 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(5.0203155e-08, 0, 0.09411768, 0, 1, 0, -1, 0, 5.3340835e-07, -0.547, 0, 0)
+
+[node name="pistaindustrial3" parent="pistas" unique_id=1489859190 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(-1.6959885e-06, 0, -4, 0, 4, 0, 38.799698, 0, -1.7484555e-07, -81.67, 0, -22.719)
+
+[node name="encontro35" parent="pistas" unique_id=969214967 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(5.245365e-07, 0, 4.0365663, 0, 4, 0, -3.9999995, 0, 5.293318e-07, -81.69, 0, -1.3745174)
+
+[node name="encontro37" parent="pistas" unique_id=2014129093 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-3.9999995, 0, -3.5288784e-07, 0, 4, 0, 3.4969108e-07, 0, -4.0365663, -69.353, 0, -1.373)
+
+[node name="encontro38" parent="pistas" unique_id=935285217 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-3.9999995, 0, -3.5288784e-07, 0, 4, 0, 3.4969108e-07, 0, -4.0365663, -56.518, 0, -1.369)
+
+[node name="encontro39" parent="pistas" unique_id=1183695772 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-3.9999995, 0, -3.5288784e-07, 0, 4, 0, 3.4969108e-07, 0, -4.0365663, -42.635, 0, -1.385)
+
+[node name="encontro40" parent="pistas" unique_id=1148462358 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-1.7484554e-07, 0, -4.0365663, 0, 4, 0, 3.9999995, 0, -1.7644392e-07, -27.563625, 0, -1.385)
+
+[node name="pistacity21" parent="pistas" unique_id=201561922 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(42.49998, 0, 0, 0, 3.9999995, 0, 0, 0, 3.9999993, -54.759, 0, 99.25)
+
+[node name="road-curve3" parent="pistas/pistacity21" unique_id=308727776 instance=ExtResource("13_8tqj5")]
+transform = Transform3D(-4.1140145e-09, 0, -0.09411768, 0, 1, 0, 1, 0, -4.3711385e-08, 0.5935055, 0, -0.49999905)
+
+[node name="road-curve4" parent="pistas" unique_id=570351674 instance=ExtResource("13_8tqj5")]
+transform = Transform3D(-3.9999988, 0, -3.49691e-07, 0, 3.9999995, 0, 3.49691e-07, 0, -3.9999988, -79.68, 0, 97.25)
+
+[node name="pistacity4" parent="pistas" unique_id=813231488 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(50.199993, 0, -0.0021641413, 0, 4, 0, 0.027159974, 0, 3.9999995, -54.58, 0, 36.41)
+
+[node name="pistacity23" parent="pistas" unique_id=999398527 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(46.99316, 0, -0.0021641962, 0, 4, 0, 0.025424963, 0, 4.000101, -56.501003, 0, 20.64)
+
+[node name="pistaacomecial3" parent="pistas" unique_id=285601829 instance=ExtResource("14_c8qsu")]
+transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, -81.69967, 0, 20.634573)
+
+[node name="pistacity6" parent="pistas" unique_id=1993007071 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(50.199993, 0, -0.0021641413, 0, 4, 0, 0.027159974, 0, 3.9999995, -54.58, 0, 48.26)
+
+[node name="pistacity8" parent="pistas" unique_id=336980472 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(50.199993, 0, -0.0021641413, 0, 4, 0, 0.027159974, 0, 3.9999995, -54.58, 0, 59.92)
+
+[node name="pistacity9" parent="pistas" unique_id=1881276542 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(50.199993, 0, -0.0021641413, 0, 4, 0, 0.027159974, 0, 3.9999995, -54.58, 0, 71.745)
+
+[node name="pistacity19" parent="pistas" unique_id=798798255 instance=ExtResource("12_c8qsu")]
+transform = Transform3D(50.199993, 0, -0.0021641413, 0, 4, 0, 0.027159974, 0, 3.9999995, -54.58, 0, 83.525)
+
 [node name="casas" type="Node" parent="." unique_id=429077474]
 
 [node name="casa1" parent="casas" unique_id=1756138565 instance=ExtResource("16_mikth")]
-transform = Transform3D(0.44699198, 0, -4.9799795, 0, 5, 0, 4.9799795, 0, 0.44699198, -16.199469, 5.9604645e-08, 29.478943)
+transform = Transform3D(0.108550355, 0, 4.998821, 0, 4.9999995, 0, -4.998821, 0, 0.108550355, -16.018389, 5.9604645e-08, 66.77086)
 
 [node name="hatchback-sports" parent="casas/casa1" unique_id=2004046320 instance=ExtResource("17_8bbpn")]
 transform = Transform3D(0.011899336, 0, 0.14952728, 0, 0.14999998, 0, -0.14952728, 0, 0.011899336, -0.5656047, 0.03999999, -0.8897455)
 
-[node name="character-male-d2" parent="." unique_id=114770752 instance=ExtResource("18_5n1n7")]
-transform = Transform3D(-0.008778861, 0, -0.99996144, 0, 1, 0, 0.99996144, 0, -0.008778861, -11.691728, 0.24377722, 29.15194)
+[node name="character-male-d2" parent="casas/casa1" unique_id=114770752 instance=ExtResource("18_5n1n7")]
+transform = Transform3D(0.19903454, 0, -0.019627733, 0, 0.19999999, 0, 0.019627733, 0, 0.19903454, 0.015458107, 0.04875543, -0.903785)
 
 [connection signal="pressed" from="hud2d/UI/voltar_home" to="." method="_on_voltar_home_pressed"]
 [connection signal="pressed" from="hud2d/UI/CONFIGS" to="." method="_on_voltar_home_pressed"]

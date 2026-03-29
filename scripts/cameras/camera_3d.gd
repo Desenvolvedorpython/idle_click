@@ -8,16 +8,16 @@ func _unhandled_input(event):
 
 		var mov = event.relative
 		
-		position.x += mov.y * velocidade
-		position.z -= mov.x * velocidade
+		position.x -= mov.y * velocidade
+		position.z += mov.x * velocidade
 
 
 	if event is InputEventScreenDrag:
 
 		var mov = event.relative
 		
-		position.x += mov.y * velocidade
-		position.z -= mov.x * velocidade
+		position.x -= mov.y * velocidade
+		position.z += mov.x * velocidade
 
 func _on_hslider_value_changed(value):
 	velocidade = value / 100.0
