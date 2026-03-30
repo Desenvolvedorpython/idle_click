@@ -29,12 +29,12 @@ func _on_inventario_pressed() -> void:
 
 
 func _on_fechar_pressed() -> void:
-	$hud2d/CanvasLayer/UI/barra_INFERIOR.visible = false
-	$hud2d/CanvasLayer/UI/fechar.visible = false
-	$hud2d/CanvasLayer/UI/abrir.visible = true
+	$hud2d/UI/barra_INFERIOR.visible = false
+	$hud2d/UI/fechar.visible = false
+	$hud2d/UI/abrir.visible = true
 
 
 func _on_abrir_pressed() -> void:
-	$hud2d/CanvasLayer/UI/barra_INFERIOR.visible = true
-	$hud2d/CanvasLayer/UI/fechar.visible = true
-	$hud2d/CanvasLayer/UI/abrir.visible = false
+	$hud2d/UI/barra_INFERIOR.visible = true
+	$hud2d/UI/fechar.visible = true
+	$hud2d/UI/abrir.visible = false

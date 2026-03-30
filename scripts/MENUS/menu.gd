@@ -28,8 +28,8 @@ func _on_entrarcomunidade_pressed() -> void:
 
 
 func _on_comunidade_pressed() -> void:
-	$ui/provisorio/COMUNIDADE/Control.visible = not $ui/provisorio/COMUNIDADE/Control.visible
-
+	$ui/provisorio/contcomunidqde.visible = not $ui/provisorio/contcomunidqde.visible
+	
 
 func _on_loja_pressed() -> void:
 	var _loja_instance = loja.instantiate()

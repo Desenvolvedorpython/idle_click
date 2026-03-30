@@ -54,16 +54,9 @@ albedo_color = Color(0, 0.25766784, 1, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_mikth"]
 material = SubResource("StandardMaterial3D_lcfgm")
 
-[sub_resource type="LabelSettings" id="LabelSettings_srya6"]
-font_size = 60
-font_color = Color(1, 0.2, 1, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6mw0"]
 corner_radius_top_left = 20
 corner_radius_top_right = 20
-
-[sub_resource type="LabelSettings" id="LabelSettings_dmxwg"]
-font_size = 41
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srya6"]
 corner_radius_top_left = 40
@@ -83,6 +76,9 @@ corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_srya6"]
+font_size = 60
 
 [node name="jogo" type="Node3D" unique_id=2070244624]
 script = ExtResource("1_1frua")
@@ -150,33 +146,7 @@ script = ExtResource("5_s5cfb")
 
 [node name="hud2d" type="Node" parent="." unique_id=1068221376]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="hud2d" unique_id=1854184231]
-
-[node name="GENERICO" type="Control" parent="hud2d/CanvasLayer" unique_id=1351120005]
-layout_mode = 3
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 104.0
-grow_horizontal = 2
-
-[node name="anuncio" type="ColorRect" parent="hud2d/CanvasLayer/GENERICO" unique_id=717931078]
-layout_mode = 0
-offset_left = -3.0
-offset_top = -1.0
-offset_right = 720.0
-offset_bottom = 99.0
-color = Color(0.18869969, 0.21840882, 0.08015653, 1)
-
-[node name="Label" type="Label" parent="hud2d/CanvasLayer/GENERICO/anuncio" unique_id=956927899]
-layout_mode = 0
-offset_left = 211.0
-offset_top = 4.0
-offset_right = 493.0
-offset_bottom = 87.0
-text = "ANUNCIO"
-label_settings = SubResource("LabelSettings_srya6")
-
-[node name="UI" type="Control" parent="hud2d/CanvasLayer" unique_id=1144221294]
+[node name="UI" type="Control" parent="hud2d" unique_id=1144221294]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -185,7 +155,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 
-[node name="voltar_home" type="Button" parent="hud2d/CanvasLayer/UI" unique_id=1816885295]
+[node name="voltar_home" type="Button" parent="hud2d/UI" unique_id=1816885295]
 layout_mode = 1
 offset_top = 96.0
 offset_right = 80.0
@@ -194,104 +164,65 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_v6mw0")
 icon = ExtResource("3_srya6")
 expand_icon = true
 
-[node name="CONFIGS" type="Button" parent="hud2d/CanvasLayer/UI" unique_id=101704467]
+[node name="CONFIGS" type="Button" parent="hud2d/UI" unique_id=101704467]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -88.0
-offset_top = 104.0
-offset_right = -16.0
-offset_bottom = 168.0
+offset_left = -64.0
+offset_top = 88.0
+offset_bottom = 152.0
 grow_horizontal = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_v6mw0")
 icon = ExtResource("3_srya6")
 vertical_icon_alignment = 2
 expand_icon = true
 
-[node name="pontos" type="Label" parent="hud2d/CanvasLayer/UI" unique_id=299924593]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 272.0
-offset_right = 304.0
-offset_bottom = 336.0
-text = "score💥 "
-label_settings = SubResource("LabelSettings_dmxwg")
-
-[node name="moedas" type="Label" parent="hud2d/CanvasLayer/UI" unique_id=494054021]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 184.0
-offset_right = 256.0
-offset_bottom = 264.0
-text = "coins "
-label_settings = SubResource("LabelSettings_dmxwg")
-
-[node name="comprarmoedas" type="Button" parent="hud2d/CanvasLayer/UI/moedas" unique_id=1552305799]
-layout_mode = 0
-offset_left = 142.0
-offset_top = 20.0
-offset_right = 193.0
-offset_bottom = 131.0
-theme_override_colors/font_color = Color(0, 1, 0.047058824, 1)
-theme_override_font_sizes/font_size = 50
-text = "+"
-flat = true
-
-[node name="gemas" type="Label" parent="hud2d/CanvasLayer/UI" unique_id=480761058]
-layout_mode = 0
-offset_left = 384.0
-offset_top = 200.0
-offset_right = 584.0
-offset_bottom = 257.0
-text = "gemas"
-label_settings = SubResource("LabelSettings_dmxwg")
-
-[node name="comprargemas" type="Button" parent="hud2d/CanvasLayer/UI/gemas" unique_id=1062875216]
+[node name="VBoxContainer" type="VBoxContainer" parent="hud2d/UI" unique_id=963393512]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -2.0760002
-anchor_top = -0.665
-anchor_right = -2.0760002
-anchor_bottom = -0.665
-offset_left = 575.2001
-offset_top = 85.905
-offset_right = 685.2001
-offset_bottom = 162.905
-theme_override_colors/font_color = Color(0, 0.8745098, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "+"
-flat = true
+offset_top = 200.0
+offset_right = 144.0
+offset_bottom = 416.0
 
-[node name="loja" type="Button" parent="hud2d/CanvasLayer/UI" unique_id=713845239]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 352.0
-offset_right = 152.0
-offset_bottom = 472.0
+[node name="loja" type="Button" parent="hud2d/UI" unique_id=713845239]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -180.0
+offset_right = 136.0
+offset_bottom = -60.0
+grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_srya6")
 icon = ExtResource("5_dtkcs")
 expand_icon = true
 
-[node name="MAPA" type="Button" parent="hud2d/CanvasLayer/UI" unique_id=1030283027]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 512.0
-offset_right = 136.0
-offset_bottom = 640.0
+[node name="MAPA" type="Button" parent="hud2d/UI" unique_id=1030283027]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -40.0
+offset_right = 128.0
+offset_bottom = 88.0
+grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_kfigh")
 text = "MAPA"
 
-[node name="PERFIL" type="Button" parent="hud2d/CanvasLayer/UI" unique_id=2039195215]
-layout_mode = 0
-offset_top = 664.0
-offset_right = 160.0
-offset_bottom = 816.0
+[node name="PERFIL" type="Button" parent="hud2d/UI" unique_id=2039195215]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 110.0
+offset_right = 144.0
+offset_bottom = 238.0
+grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_105i5")
 text = "MEU 
 PERFIL"
 
-[node name="fechar" type="Button" parent="hud2d/CanvasLayer/UI" unique_id=1938003320]
+[node name="fechar" type="Button" parent="hud2d/UI" unique_id=1938003320]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -308,7 +239,7 @@ theme_override_font_sizes/font_size = 24
 text = "|
 \\/"
 
-[node name="abrir" type="Button" parent="hud2d/CanvasLayer/UI" unique_id=112977424]
+[node name="abrir" type="Button" parent="hud2d/UI" unique_id=112977424]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -324,7 +255,18 @@ grow_vertical = 0
 text = "/\\
 |"
 
-[node name="barra_INFERIOR" type="ColorRect" parent="hud2d/CanvasLayer/UI" unique_id=624019646]
+[node name="colorbarrainferior" type="ColorRect" parent="hud2d/UI" unique_id=1853974238]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 1, 0, 1)
+
+[node name="barra_INFERIOR" type="HBoxContainer" parent="hud2d/UI" unique_id=1528521359]
 layout_direction = 3
 layout_mode = 1
 anchors_preset = -1
@@ -336,61 +278,84 @@ offset_left = 64.08
 offset_top = -128.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0.27058825, 1, 1, 1)
+theme_override_constants/separation = 158
 
-[node name="inventario" type="Button" parent="hud2d/CanvasLayer/UI/barra_INFERIOR" unique_id=1271290646]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 2.0
-offset_right = 182.0
-offset_bottom = 122.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_c77ad")
-text = "inventario "
-
-[node name="INFOS" type="Button" parent="hud2d/CanvasLayer/UI/barra_INFERIOR" unique_id=100568259]
-layout_mode = 0
-offset_left = 222.0
-offset_top = 2.0
-offset_right = 350.0
-offset_bottom = 122.0
+[node name="INFOS" type="Button" parent="hud2d/UI/barra_INFERIOR" unique_id=100568259]
+layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_c77ad")
 text = "INFOS"
 
-[node name="DADOS" type="Button" parent="hud2d/CanvasLayer/UI/barra_INFERIOR" unique_id=548438977]
-layout_mode = 0
-offset_left = 422.0
-offset_top = 2.0
-offset_right = 560.0
-offset_bottom = 122.0
+[node name="DADOS" type="Button" parent="hud2d/UI/barra_INFERIOR" unique_id=548438977]
+layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_c77ad")
 text = "DADOS"
 
-[node name="banco" type="Button" parent="hud2d/CanvasLayer/UI/barra_INFERIOR" unique_id=2108023830]
-layout_mode = 0
-offset_left = 581.0
-offset_top = 2.0
-offset_right = 706.0
-offset_bottom = 124.0
+[node name="banco" type="Button" parent="hud2d/UI/barra_INFERIOR" unique_id=2108023830]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxFlat_c77ad")
 text = "BANCO"
 
-[node name="+" type="Button" parent="hud2d/CanvasLayer/UI" unique_id=510278021]
-layout_mode = 0
-offset_left = 640.0
-offset_top = 453.0
-offset_right = 720.0
-offset_bottom = 544.0
+[node name="inventario" type="Button" parent="hud2d/UI/barra_INFERIOR" unique_id=1271290646]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_c77ad")
+text = "inventario "
+
+[node name="+" type="Button" parent="hud2d/UI" unique_id=510278021]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -40.0
+offset_bottom = 51.0
+grow_horizontal = 0
+grow_vertical = 2
 theme_override_font_sizes/font_size = 60
 text = "+"
 
-[node name="-" type="Button" parent="hud2d/CanvasLayer/UI" unique_id=842595651]
-layout_mode = 0
-offset_left = 640.0
-offset_top = 560.0
-offset_right = 720.0
-offset_bottom = 651.0
+[node name="-" type="Button" parent="hud2d/UI" unique_id=842595651]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 60.0
+offset_bottom = 151.0
+grow_horizontal = 0
+grow_vertical = 2
 theme_override_font_sizes/font_size = 60
 text = "-"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="hud2d" unique_id=1854184231]
+
+[node name="GENERICO" type="Control" parent="hud2d/CanvasLayer" unique_id=1351120005]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 104.0
+grow_horizontal = 2
+
+[node name="anuncio" type="ColorRect" parent="hud2d/CanvasLayer/GENERICO" unique_id=717931078]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 720.0
+offset_bottom = 99.0
+color = Color(1, 0, 1, 1)
+
+[node name="Label" type="Label" parent="hud2d/CanvasLayer/GENERICO/anuncio" unique_id=956927899]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 4.0
+offset_right = 493.0
+offset_bottom = 87.0
+text = "ANUNCIO"
+label_settings = SubResource("LabelSettings_srya6")
 
 [node name="scriptglobal" type="Node" parent="." unique_id=1932116215]
 script = ExtResource("5_dmxwg")
@@ -700,12 +665,12 @@ transform = Transform3D(-0.010080269, 0, 2.9006743, 0, 0.79540586, 0, -0.2251940
 [node name="door-garage2" parent="industrias/textil" unique_id=1046224204 instance=ExtResource("23_a6k30")]
 transform = Transform3D(5.296616e-05, -0.5446341, 4.0376804e-09, -1.26372e-09, -7.2380395e-09, -0.30549127, -0.030347085, -0.0009505749, 1.2728382e-08, 0.2001133, 0.12927875, -1.0997372)
 
-[connection signal="pressed" from="hud2d/CanvasLayer/UI/voltar_home" to="." method="_on_voltar_home_pressed"]
-[connection signal="pressed" from="hud2d/CanvasLayer/UI/CONFIGS" to="." method="_on_voltar_home_pressed"]
-[connection signal="pressed" from="hud2d/CanvasLayer/UI/loja" to="." method="_on_loja_pressed"]
-[connection signal="pressed" from="hud2d/CanvasLayer/UI/fechar" to="." method="_on_fechar_pressed"]
-[connection signal="pressed" from="hud2d/CanvasLayer/UI/abrir" to="." method="_on_abrir_pressed"]
-[connection signal="pressed" from="hud2d/CanvasLayer/UI/barra_INFERIOR/inventario" to="." method="_on_inventario_pressed"]
-[connection signal="pressed" from="hud2d/CanvasLayer/UI/barra_INFERIOR/banco" to="." method="_on_banco_pressed"]
-[connection signal="pressed" from="hud2d/CanvasLayer/UI/+" to="Camera3D" method="zoom_in"]
-[connection signal="pressed" from="hud2d/CanvasLayer/UI/-" to="Camera3D" method="zoom_out"]
+[connection signal="pressed" from="hud2d/UI/voltar_home" to="." method="_on_voltar_home_pressed"]
+[connection signal="pressed" from="hud2d/UI/CONFIGS" to="." method="_on_voltar_home_pressed"]
+[connection signal="pressed" from="hud2d/UI/loja" to="." method="_on_loja_pressed"]
+[connection signal="pressed" from="hud2d/UI/fechar" to="." method="_on_fechar_pressed"]
+[connection signal="pressed" from="hud2d/UI/abrir" to="." method="_on_abrir_pressed"]
+[connection signal="pressed" from="hud2d/UI/barra_INFERIOR/banco" to="." method="_on_banco_pressed"]
+[connection signal="pressed" from="hud2d/UI/barra_INFERIOR/inventario" to="." method="_on_inventario_pressed"]
+[connection signal="pressed" from="hud2d/UI/+" to="Camera3D" method="zoom_in"]
+[connection signal="pressed" from="hud2d/UI/-" to="Camera3D" method="zoom_out"]
