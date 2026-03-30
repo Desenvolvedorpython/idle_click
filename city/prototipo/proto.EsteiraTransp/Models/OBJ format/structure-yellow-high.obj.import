@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1krn6jjfyeql"
+path="res://.godot/imported/structure-yellow-high.obj-92b65ea9a9c034350a28d89395d248ad.mesh"
+
+[deps]
+
+files=["res://.godot/imported/structure-yellow-high.obj-92b65ea9a9c034350a28d89395d248ad.mesh"]
+
+source_file="res://city/prototipo/proto.EsteiraTransp/Models/OBJ format/structure-yellow-high.obj"
+dest_files=["res://.godot/imported/structure-yellow-high.obj-92b65ea9a9c034350a28d89395d248ad.mesh", "res://.godot/imported/structure-yellow-high.obj-92b65ea9a9c034350a28d89395d248ad.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

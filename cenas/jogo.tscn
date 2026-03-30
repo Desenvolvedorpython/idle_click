@@ -20,8 +20,14 @@
 [ext_resource type="PackedScene" uid="uid://dowa2mx7gvb6" path="res://personagens/figurantes/Models/GLB format/character-male-d.glb" id="18_5n1n7"]
 [ext_resource type="PackedScene" uid="uid://cx7ahj3bkwn8y" path="res://city/industria/Models/GLB format/building-l.glb" id="20_5b70y"]
 [ext_resource type="PackedScene" uid="uid://doytfroqojyva" path="res://city/industria/Models/GLB format/galpao1.glb" id="21_jjf05"]
-[ext_resource type="PackedScene" uid="uid://c7mvoy762neph" path="res://city/prototipo/Models/GLB format/paredeReta.glb" id="22_s4vdq"]
-[ext_resource type="PackedScene" uid="uid://6osv1hxaejr7" path="res://city/prototipo/Models/GLB format/door-garage.glb" id="23_a6k30"]
+[ext_resource type="PackedScene" uid="uid://buskcklhpd4s8" path="res://city/industria/Models/GLB format/building-r.glb" id="24_jb01b"]
+[ext_resource type="PackedScene" uid="uid://cl8kyq44ob0jx" path="res://city/industria/Models/GLB format/building-c.glb" id="24_nqs43"]
+[ext_resource type="PackedScene" uid="uid://gdor850ffixh" path="res://city/industria/Models/GLB format/galpao2.glb" id="25_nqs43"]
+[ext_resource type="PackedScene" uid="uid://dmncm8un5q05o" path="res://city/industria/Models/GLB format/building-e.glb" id="25_x58kd"]
+[ext_resource type="PackedScene" uid="uid://dt1hx2j1lfmg5" path="res://city/industria/Models/GLB format/building-m.glb" id="26_x58kd"]
+[ext_resource type="PackedScene" uid="uid://dsrahjenf3j2v" path="res://city/industria/Models/GLB format/building-p.glb" id="27_71jtt"]
+[ext_resource type="PackedScene" uid="uid://b4sj0v7wgdvu0" path="res://city/prototipo/proto.EsteiraTransp/Models/GLB format/cover-stripe-hopper.glb" id="28_apibt"]
+[ext_resource type="PackedScene" uid="uid://b2nafwepbrpuc" path="res://city/prototipo/proto.EsteiraTransp/Models/GLB format/top.glb" id="29_vm3ck"]
 
 [sub_resource type="Curve3D" id="Curve3D_105i5"]
 
@@ -639,31 +645,37 @@ transform = Transform3D(-2.185569e-07, 0, 4.999999, 0, 4.9999995, 0, -4.999999, 
 [node name="industrias" type="Node" parent="." unique_id=397098969]
 
 [node name="textil" parent="industrias" unique_id=1628585149 instance=ExtResource("20_5b70y")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 20.83479, 0.23244882, -46.386013)
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 2.8568592, 0.23244882, -46.386013)
 
 [node name="galpao1" parent="industrias/textil" unique_id=1231888896 instance=ExtResource("21_jjf05")]
 transform = Transform3D(0.6666667, 0, 0, 0, 0.6666667, 0, 0, 0, 0.6666667, 1.1686647, -9.934108e-09, -0.28826475)
 
-[node name="wall-low2" parent="industrias/textil" unique_id=797610783 instance=ExtResource("22_s4vdq")]
-transform = Transform3D(0.22615027, 0, 0, 0, 0.7954058, 0, 0, 0, 2.4638877, -1.54, 0, 0.143)
+[node name="lactcinio" parent="industrias" unique_id=309764640 instance=ExtResource("24_nqs43")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 40.188347, 2.272893e-15, -20.858288)
 
-[node name="wall-low3" parent="industrias/textil" unique_id=449813053 instance=ExtResource("22_s4vdq")]
-transform = Transform3D(0.22615027, 0, 0, 0, 0.7954058, 0, 0, 0, 2.3328006, 1.3144512, -9.934108e-09, 0.07816219)
+[node name="laticinio" parent="industrias/lactcinio" unique_id=945123016 instance=ExtResource("25_x58kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4494629, -5.6822326e-16, -0.38396692)
 
-[node name="wall-low4" parent="industrias/textil" unique_id=1513626832 instance=ExtResource("22_s4vdq")]
-transform = Transform3D(-9.885343e-09, 0, 1.1409891, 0, 0.79540586, 0, -0.22615032, 0, -4.9874203e-08, 0.7674408, -9.934108e-09, -1.1001816)
+[node name="galpao2" parent="industrias/lactcinio" unique_id=842126873 instance=ExtResource("21_jjf05")]
+transform = Transform3D(-3.278354e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.278354e-08, -2.2331944, -5.6822326e-16, 0.5092983)
 
-[node name="wall-low7" parent="industrias/textil" unique_id=2106906990 instance=ExtResource("22_s4vdq")]
-transform = Transform3D(-9.885343e-09, 0, 0.44830513, 0, 0.25190985, 0, -0.22615032, 0, -1.959604e-08, -0.023, 0.271, -1.1)
+[node name="frigorifica" parent="industrias" unique_id=1510278377 instance=ExtResource("24_jb01b")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 55.233288, 1.9073486e-06, -42.306923)
 
-[node name="wall-low6" parent="industrias/textil" unique_id=71799531 instance=ExtResource("22_s4vdq")]
-transform = Transform3D(-9.885344e-09, 0, 1.3244928, 0, 0.79540586, 0, -0.22615032, 0, -5.7895416e-08, -0.8982878, -9.934108e-09, -1.1001816)
+[node name="galpao3" parent="industrias/frigorifica" unique_id=1814269039 instance=ExtResource("25_nqs43")]
+transform = Transform3D(-3.278354e-08, 0, -0.75, 0, 0.75, 0, 0.75, 0, -3.278354e-08, -0.86473083, -4.7683716e-07, -0.8969021)
 
-[node name="wall-low5" parent="industrias/textil" unique_id=1554395745 instance=ExtResource("22_s4vdq")]
-transform = Transform3D(-0.010080269, 0, 2.9006743, 0, 0.79540586, 0, -0.22519402, 0, -0.12984169, -0.11400032, -9.934108e-09, 1.2939997)
+[node name="indefinido" parent="industrias" unique_id=967126325 instance=ExtResource("26_x58kd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 33.96953, -9.536743e-07, -40.12119)
 
-[node name="door-garage2" parent="industrias/textil" unique_id=1046224204 instance=ExtResource("23_a6k30")]
-transform = Transform3D(5.296616e-05, -0.5446341, 4.0376804e-09, -1.26372e-09, -7.2380395e-09, -0.30549127, -0.030347085, -0.0009505749, 1.2728382e-08, 0.2001133, 0.12927875, -1.0997372)
+[node name="indefinidoSec" parent="industrias/indefinido" unique_id=733922870 instance=ExtResource("27_71jtt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4917369, 2.026558e-07, -0.07954788)
+
+[node name="cover-stripe-hopper2" parent="." unique_id=691858171 instance=ExtResource("28_apibt")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 19.997185, 0, -9.681918)
+
+[node name="top2" parent="." unique_id=2116517840 instance=ExtResource("29_vm3ck")]
+transform = Transform3D(-1.9665869e-08, -0.7272765, 0, 0.44990265, -3.1790265e-08, 0, 0, 0, 0.5011993, 19.746733, 0.2795323, -9.6721945)
 
 [connection signal="pressed" from="hud2d/UI/voltar_home" to="." method="_on_voltar_home_pressed"]
 [connection signal="pressed" from="hud2d/UI/CONFIGS" to="." method="_on_voltar_home_pressed"]
