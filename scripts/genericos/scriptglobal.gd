@@ -11,20 +11,22 @@ var sensibilidade := 0.050
 var variavelT = 1 #1 rende 1, 2 rende o dobro e etc
 var divida = 1000000 # divida de 1 milhao
 var emprestimo = 0 #emprestimo com base no quando o jogador tem
-var acesso_construcao
+var ascesso_construcao
+var horas_jogadas = 0
 
 var inventario = {
+	#basicos
 	"pedra": 0,
-	"madeira": 0,
-	"petróleo": 0,
+	"tora": 0, 
 	#anaimais
 	"lã": 0,
 	"leite": 0,
 	"ovos": 0,
 	#minerios
+	"petróleo": 0,
 	"ouro": 0,
-	"açobruto": 0,
-	"aço": 0,
+	"ferrobruto": 0,
+	"ferro": 0,
 	#plantacoes
 	"trigo":0,
 	"milho":0,

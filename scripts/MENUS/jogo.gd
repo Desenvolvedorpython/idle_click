@@ -1,14 +1,15 @@
 extends Node3D
 
+#variaveis do codigo
 
+
+
+#importacoes de cenas 
 var loja = preload("res://cenas/loja.tscn")
 var home = preload("res://cenas/menu.tscn")
 var banco = preload("res://cenas/cena_banco.tscn")
 @onready var audioP = $sons/Pontos
 @onready var audioC = $sons/MConverter_euCoins
-
-
-
 
 func _on_loja_pressed() -> void:
 	var _loja_instance = loja.instantiate()
@@ -38,3 +39,7 @@ func _on_abrir_pressed() -> void:
 	$hud2d/CanvasLayer/UI/barra_INFERIOR.visible = true
 	$hud2d/CanvasLayer/UI/fechar.visible = true
 	$hud2d/CanvasLayer/UI/abrir.visible = false
+
+func _process(delta: float) -> void:
+	cache.horas_jogadas += delta
+	
