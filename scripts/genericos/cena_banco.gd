@@ -15,10 +15,10 @@ func _on_voltar_pressed() -> void:
 
 #COLOCAR OS LABELS DE BANCO TUDO ORGGANIZADO AQUI ABAIXO
 
-func _process(_delta: float) -> void:
-	$dinheiro.text = str(cache.moedas)
-	$GEMAS.text = str(cache.gemas)
-	$SSCORE.text = str(cache.pontos)
+#func _process(_delta: float) -> void:
+	#$dinheiro.text = str(cache.moedas)
+	#$GEMAS.text = str(cache.gemas)
+	#$SSCORE.text = str(cache.pontos)
 
 
 func _on_comprar_pressed() -> void:
